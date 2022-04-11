@@ -4,12 +4,20 @@
   "description": "Launch youtube in old TV mode",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "author": "",
+  "author": "Paul LESELLIER",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^18.0.3"
+    "electron": "^18.0.3",
+    "electron-builder": "^23.0.3"
   },
-  "dependencies": {}
+  "build": {
+    "appId": "com.rohja.youtubetv",
+    "mac": {
+      "category": "public.app-category.youtube-player"
+    }
+  }
 }
